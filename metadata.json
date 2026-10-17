@@ -1,0 +1,6 @@
+{
+  "name": "AURA AI - Yeni Nesil Akıllı Asistan & Üretken Stüdyo",
+  "description": "Gemini tarzı gelişmiş yapay zeka asistanı: Fotoğraf ve müzik üretimi, sesli komutlar, akıllı ders özetleyici, uçtan uca şifreleme ve etkileşimli performans paneli.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

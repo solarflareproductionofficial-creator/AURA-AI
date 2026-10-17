@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes aurora-float {
+    0%, 100% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(30px, -40px) scale(1.1) rotate(60deg);
+    }
+    66% {
+      transform: translate(-25px, 25px) scale(0.95) rotate(120deg);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.35;
+      transform: scale(1);
+      filter: blur(50px);
+    }
+    50% {
+      opacity: 0.65;
+      transform: scale(1.15);
+      filter: blur(65px);
+    }
+  }
+
+  @keyframes shimmer-sweep {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes float-subtle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .animate-aurora {
+    animation: aurora-float 22s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 7s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background-size: 200% auto;
+    animation: shimmer-sweep 4s linear infinite;
+  }
+
+  .animate-float {
+    animation: float-subtle 4s ease-in-out infinite;
+  }
+}
+
+/* Custom smooth scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.45);
+}
+
+/* Global font smoothing */
+html {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
